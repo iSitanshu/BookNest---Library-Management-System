@@ -1,17 +1,19 @@
 import BookList from "@/components/BookList";
 import BookOverview from "@/components/BookOverview";
 import { sampleBooks } from "@/constants";
-import Image from "next/image";
 
-const Home = () => (
-  <>
-  <BookOverview {...sampleBooks[0]}/>
-  <BookList 
-  title="Latest Books"
-  books={sampleBooks}
-  containerClassName="mt-28"
-  />
-  </>
-);
+const Home = async () => {
+  return (
+    <>
+      <BookOverview {...sampleBooks[0]} />
 
-export default Home
+      <BookList
+        title="Latest Books"
+        books={sampleBooks}
+        containerClassName="mt-28"
+      />
+    </>
+  );
+};
+
+export default Home;

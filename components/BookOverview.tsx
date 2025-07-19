@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import BookCover from "./BookCover";
-import Demo from "./Demo";
 
 const BookOverview = ({
   title,
@@ -16,7 +15,7 @@ const BookOverview = ({
   coverUrl,
 }: Book) => {
   return (
-    <section className="book-overview flex">
+    <section className="book-overview">
       <div className="flex flex-1 flex-col gap-5">
         <h1>{title}</h1>
 
@@ -47,7 +46,6 @@ const BookOverview = ({
         </div>
 
         <p className="book-description">{description}</p>
-        <Button>Borrow</Button>
       </div>
 
       <div className="relative flex flex-1 justify-center">
@@ -59,7 +57,7 @@ const BookOverview = ({
             coverImage={coverUrl}
           />
 
-          <div className="absolute left-9 top-15 rotate-15 opacity-50 max-sm:hidden">
+          <div className="absolute left-16 top-10 rotate-12 opacity-40 max-sm:hidden">
             <BookCover
               variant="wide"
               coverColor={coverColor}
@@ -67,11 +65,6 @@ const BookOverview = ({
             />
           </div>
         </div>
-      {/* <div className="relative flex flex-1 justify-center">
-        There is the image
-        {coverUrl}
-        <Demo coverImage={coverUrl} />
-      </div> */}
       </div>
     </section>
   );

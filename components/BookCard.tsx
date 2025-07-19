@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import BookCover from "@/components/BookCover";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import BookCover from "./BookCover";
 
 const BookCard = ({
   id,

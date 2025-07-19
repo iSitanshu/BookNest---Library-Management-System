@@ -19,7 +19,7 @@ interface Props {
   className?: string;
   variant?: BookCoverVariant;
   coverColor: string;
-  coverImage?: string;
+  coverImage: string;
 }
 
 const BookCover = ({
@@ -35,19 +35,20 @@ const BookCover = ({
         variantStyles[variant],
         className,
       )}
-      >
-      {coverImage}
+    >
       <BookCoverSvg coverColor={coverColor} />
 
       <div
-        className="absolute z-10"
-        style={{ left: "12%", width: "87.5%", height: "88%" }}
+        // className="absolute z-10"
+        // style={{ left: "12%", width: "87.5%", height: "88%" }}
       >
         <Image 
         src={coverImage}
         alt="Book Image"
         className="rounded-sm object-fill border-8"
-        fill
+        // fill
+        width={250}
+        height={250}
         />
       </div>
     </div>
